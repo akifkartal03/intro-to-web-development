@@ -6,4 +6,6 @@ branches:
   only:
     - "master"
 script:
+  - npm ci
   - npm run build
+  - npm test
