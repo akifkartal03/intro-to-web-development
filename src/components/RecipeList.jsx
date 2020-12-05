@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Recipies from "./ShowRecipies";
 import data from "../data/album";
-const Products = ({ categories }) => {
+const Recipies = ({ categories }) => {
   const [recipies, SetRecipe] = useState([]);
   useEffect(() => {
     SetRecipe(getRecipies());
@@ -19,4 +19,4 @@ const Products = ({ categories }) => {
 function getRecipies() {
   return data;
 }
-export default Products;
+export default Recipies;
