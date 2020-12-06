@@ -24,8 +24,7 @@ const Header = () => {
               strokeLinejoin="round"
               className="mr-2"
             />
-            // eslint-disable-next-line
-            <a className="navbar-brand" href="#">
+            <a className="navbar-brand" href="/">
               <img
                 src="https://i.ibb.co/12pWKWZ/Sandwich2.png"
                 width="70"
