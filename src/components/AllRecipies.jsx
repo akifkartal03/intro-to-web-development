@@ -2,23 +2,12 @@ import React, { useState, useEffect } from "react";
 import Products from "./RecipeList";
 const Recipies = () => {
   const [brands, setBrands] = useState([]);
-  const [selectedCheckboxes, setSelectedBoxes] = useState(new Set());
   useEffect(() => {
     setBrands(getBrands);
   }, []);
   const handleSelectBox = (e) => {
     const name = e.target.name;
-    const value = e.target.checked;
-    if (selectedCheckboxes.has(name)) {
-      selectedCheckboxes.delete(name);
-    } else {
-      selectedCheckboxes.add(name);
-    }
-  };
-  const print = () => {
-    for (const checkbox of selectedCheckboxes) {
-      console.log(checkbox, "is selected.");
-    }
+    console.log(name);
   };
   return (
     <React.Fragment>

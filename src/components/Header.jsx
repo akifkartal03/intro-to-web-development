@@ -1,16 +1,12 @@
 import React from "react";
 import {
-  Col,
-  Collapse,
   Container,
   Navbar,
-  NavbarToggler,
   NavbarBrand,
-  NavLink,
-  Row,
+  NavLink
 } from "reactstrap";
 
-const Header = ({ collapsed, toggleNavbar, socialLinks }) => {
+const Header = () => {
   return (
     <header>
       <Navbar color="dark" dark>
@@ -28,6 +24,7 @@ const Header = ({ collapsed, toggleNavbar, socialLinks }) => {
               strokeLinejoin="round"
               className="mr-2"
             />
+            // eslint-disable-next-line
             <a className="navbar-brand" href="#">
               <img
                 src="https://i.ibb.co/12pWKWZ/Sandwich2.png"
@@ -38,10 +35,10 @@ const Header = ({ collapsed, toggleNavbar, socialLinks }) => {
                 loading="lazy"
               />
             </a>
-            <NavLink style={{ color: "white" }} href="#">
+            <NavLink style={{ color: "white" }}>
               Home
             </NavLink>
-            <NavLink style={{ color: "white" }} href="#">
+            <NavLink style={{ color: "white" }}>
               All Recipies
             </NavLink>
           </NavbarBrand>
