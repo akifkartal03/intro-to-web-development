@@ -10,7 +10,7 @@ const Products = ({ categories }) => {
     <div className="col-lg-9">
       <div className="row">
         <div className="col-30">
-          <Recipies recipies={recipies} />
+          <Recipies key="1" recipies={recipies} />
         </div>
       </div>
     </div>
