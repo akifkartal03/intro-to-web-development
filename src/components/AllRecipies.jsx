@@ -10,7 +10,6 @@ const Recipies = () => {
     const name = e.target.name;
     console.log(name);
   };
-  let counter = 0;
   return (
     <React.Fragment>
       <div className="container" style={{ paddingTop: "2rem", marginLeft: 70 }}>
@@ -23,7 +22,7 @@ const Recipies = () => {
                     <h3>Categories</h3>
                   </div>
                   <ul className="list-group flex-row flex-wrap" key={shortid.generate()}>
-                    {brands.map((brand,index) => (
+                    {brands.map((brand) => (
                       <li className="list-group-item flex-50" key={shortid.generate()}>
                         <label className="custom-checkbox text-capitalize" key={shortid.generate()}>
                           {" "}
