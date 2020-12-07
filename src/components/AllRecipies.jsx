@@ -29,6 +29,7 @@ const Recipies = () => {
                           <input
                             type="checkbox"
                             name={brand}
+                            id = 'checkbox'
                             className="custom-checkbox__input"
                             onInput={handleSelectBox}
                           />

@@ -13,8 +13,9 @@ const Album = ({ recipies }) => {
   return (
     <div className="recipies">
       <Container>
-        <Row>
+        <Row id='row'>
           {recipies.map((recipie, index) => {
+            index=index+1
             return (
               <Col md="4" key={index}>
                 <Card className="mb-4 box-shadow">

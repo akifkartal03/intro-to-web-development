@@ -1,13 +1,12 @@
 import React from "react";
-import { Container, Navbar, NavbarBrand, NavLink } from "reactstrap";
-
+import { Container, Navbar, NavbarBrand, NavLink} from "reactstrap";
 const Header = () => {
   return (
     <div>
       <header>
-        <Navbar color="dark" dark>
+        <Navbar color="dark" dark id='navbar'>
           <Container>
-            <NavbarBrand href="/" className="d-flex align-items-center mr-auto">
+            <NavbarBrand className="d-flex align-items-center mr-auto">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -20,7 +19,7 @@ const Header = () => {
                 strokeLinejoin="round"
                 className="mr-2"
               />
-              <a className="navbar-brand" href="/">
+              <div className="navbar-brand" href="/">
                 <img
                   src="https://i.ibb.co/12pWKWZ/Sandwich2.png"
                   width="70"
@@ -29,9 +28,7 @@ const Header = () => {
                   alt=""
                   loading="lazy"
                 />
-              </a>
-              <NavLink style={{ color: "white" }}>Home</NavLink>
-              <NavLink style={{ color: "white" }}>All Recipies</NavLink>
+              </div>
             </NavbarBrand>
           </Container>
         </Navbar>
