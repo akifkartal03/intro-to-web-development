@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Recipies from "./ShowRecipies";
-import data from "../data/album";
+import data from "../../data/album";
 const Products = ({ categories }) => {
   const [recipies, SetRecipe] = useState([]);
   useEffect(() => {

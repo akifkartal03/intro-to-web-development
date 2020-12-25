@@ -1,5 +1,6 @@
 import React from "react";
-import { Container, Navbar, NavbarBrand} from "reactstrap";
+import {NavLink as RouterNavLink } from 'react-router-dom';
+import { Container, Navbar, NavbarBrand,NavLink} from "reactstrap";
 const Header = () => {
   return (
     <div>
@@ -29,7 +30,10 @@ const Header = () => {
                   loading="lazy"
                 />
               </div>
+              <NavLink style={{color: 'white'}} tag={RouterNavLink} to="/"> Home </NavLink>
+              <NavLink style={{color: 'white'}} tag={RouterNavLink} to="login2"> All Recipes </NavLink>
             </NavbarBrand>
+            <NavLink style={{color: 'white'}} tag={RouterNavLink} to="/login"> <strong> Login </strong></NavLink>
           </Container>
         </Navbar>
       </header>
