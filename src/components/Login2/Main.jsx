@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import {useStore} from '../../redux/store/Provider';
+import {setUSer} from '../../redux/actions/LoginAction';
+import { useHistory } from 'react-router-dom';
 import {
   Button,
   Container,
@@ -12,11 +15,12 @@ import {
 } from "reactstrap";
 
 const Main = () => {
+  let history = useHistory();
   const [username, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const [encPassword, seteEncPassword] = useState("");
   const [dncPassword, setDncPassword] = useState("");
-
+  const [store,dispatch] = useStore();
   const onChangePassword = (e) => {
     setPassword(e);
     seteEncPassword(encrypt(e));
@@ -25,6 +29,10 @@ const Main = () => {
     setUserName(e);
 
   };
+  function onLogin() {
+    dispatch(setUSer(username));
+    history.push("/");
+  }
   const handleKeyPress = (target) => {};
   console.log(encPassword);
   console.log(decrypted(encPassword));
@@ -102,7 +110,7 @@ const Main = () => {
                     />
                   </InputGroup>
                   <br />
-                  <Button>Login</Button>
+                  <Button onClick={onLogin}>Login</Button>
                 </CardBody>
               </Card>
             </div>
