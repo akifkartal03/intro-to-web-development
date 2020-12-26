@@ -4,11 +4,14 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
-
+import { StateProvider } from "./redux/store/Provider";
+import { initialState, reducer } from "./redux/reducers/LoginReducer";
 ReactDOM.render(
+  <StateProvider reducer={reducer} initialValue={initialState}>
     <BrowserRouter>
       <App />
-    </BrowserRouter>,
+    </BrowserRouter>
+    </StateProvider>,
   document.getElementById("root")
 );
 // If you want to start measuring performance in your app, pass a function

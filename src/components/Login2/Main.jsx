@@ -34,8 +34,8 @@ const Main = () => {
     history.push("/");
   }
   const handleKeyPress = (target) => {};
-  console.log(encPassword);
-  console.log(decrypted(encPassword));
+  //console.log(encPassword);
+  console.log(decrypted("123abc"));
   function encrypt(pass) {
     var number;
     var string = [];

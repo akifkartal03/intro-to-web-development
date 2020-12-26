@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Products from "./RecipeList";
 import shortid from 'shortid';
-
 const Recipies = () => {
   const [brands, setBrands] = useState([]);
   useEffect(() => {
